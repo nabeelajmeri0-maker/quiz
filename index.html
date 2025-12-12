@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Quiz</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+
+  <!-- Name input -->
+  <div class="name-container" id="nameContainer">
+    <h1>Welcome!</h1>
+    <p>Please enter your name to start the quiz:</p>
+    <input type="text" id="username" placeholder="Enter your name" />
+    <button id="startBtn">Start Quiz</button>
+  </div>
+
+  <!-- Quiz container -->
+  <div class="quiz-container" id="quizContainer">
+    <div id="greeting"></div>
+
+    <div class="quiz-header">
+      <h1>JavaScript Quiz</h1>
+      <div class="timer">
+        <span id="timerText">60s</span>
+        <div class="progress-bar">
+          <div id="timerProgress"></div>
+        </div>
+        <svg width="50" height="50">
+          <circle cx="25" cy="25" r="20" stroke="#39ffaf" stroke-width="5" fill="none" id="circleProgress"/>
+        </svg>
+      </div>
+    </div>
+
+    <div class="quiz-body">
+      <div id="questionText" class="question"></div>
+      <div id="answers" class="answers"></div>
+    </div>
+
+    <div class="quiz-footer">
+      <button id="prevBtn">Previous</button>
+      <button id="nextBtn">Next</button>
+      <button id="submitBtn">Submit</button>
+      <div id="qCount"></div>
+    </div>
+
+    <div id="progressCircles" class="progress-circles"></div>
+  </div>
+
+</div>
+
+<!-- Result Modal -->
+<div id="resultModal" class="result-modal hidden">
+  <div class="result-card">
+    <h2>Quiz Results</h2>
+    <div class="result-summary">
+      <div id="scoreSummary" class="score-summary"></div>
+      <div class="score-bar-container">
+        <div class="score-bar" id="scoreBar"></div>
+      </div>
+    </div>
+    <div id="detailedResults" class="detailed-results"></div>
+    <div class="result-actions">
+      <button id="retryBtn" class="btn primary">Retry Quiz</button>
+      <button id="closeBtn" class="btn secondary">Close</button>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
+
